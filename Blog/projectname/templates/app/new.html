@@ -1,0 +1,12 @@
+{% extends 'shared/base.html' %}
+{% block title %}게시글 작성{% endblock %}
+{% block style %}{% endblock %}
+{% block body %}
+<form action="/app/new" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+    <input type="submit" value="Submit"
+    <br>
+    <a href="/app">목록으로</a>
+</form>
+{% endblock %}

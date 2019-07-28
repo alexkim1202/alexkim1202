@@ -1,0 +1,10 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        {% block style %}{% endblock %}
+        <link rel="stylesheet" href="{% static 'css/uikit.css' %}">
+        <script src="{% static 'js/uikit.js' %}"></script>
+    </head>
+    <body>{% block body %}{% endblock %}</body>
+</html>

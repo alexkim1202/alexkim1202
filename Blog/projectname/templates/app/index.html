@@ -1,0 +1,29 @@
+{% extends 'shared/base.html' %}
+{% block title %}목록{% endblock %}
+{% block style %}
+{% endblock %}
+{% block body %}
+<a class='newbtn' href="/app/new">게시물 작성</a>
+
+<div style="width: 50%;">
+<table class="uk-table uk-table-striped">
+     <thead><td>#<td>제목<td>삭제</td></thead>
+    <tbody>
+    {% for b in board %}
+    <tr>
+        <td>
+            {{ forloop.counter}}
+        <td>
+        <a href="/app/board/{{b.id}}">{{b.title}}</a>
+        <td>
+        <a href="/app/remove/{{ b.id }}">삭제</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% endblock %}
+
+
